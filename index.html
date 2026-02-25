@@ -46,7 +46,7 @@
 
 <div class="login-box">
     <h2>Login</h2>
-    <form>
+    <form action="/" method="POST" >
         <input type="text" name="username" id="username" placeholder="Username" required>
         <input type="password" name="password" id="password" placeholder="Password" required>
         <button type="submit">Sign In</button>
@@ -72,3 +72,4 @@ function login(event) {
 document.querySelector("form").addEventListener("submit", login);
 </script>
 </html>
+
