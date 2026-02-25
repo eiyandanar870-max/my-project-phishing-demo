@@ -47,11 +47,29 @@
 <div class="login-box">
     <h2>Login</h2>
     <form>
-        <input type="text" placeholder="Username" required>
-        <input type="password" placeholder="Password" required>
+        <input type="text" id="username" placeholder="Username" required>
+        <input type="password" id="password" placeholder="Password" required>
         <button type="submit">Sign In</button>
     </form>
 </div>
 
 </body>
+<script>
+function login(event) {
+    event.preventDefault(); // Prevent page reload
+
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+
+    // Demo credentials
+    if(username === "yadi" && password === "12345") {
+        alert("Login Successful!");
+    } else {
+        alert("Invalid Username or Password!");
+    }
+}
+
+// Attach login function to form
+document.querySelector("form").addEventListener("submit", login);
+</script>
 </html>
